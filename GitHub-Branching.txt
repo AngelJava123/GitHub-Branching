@@ -146,3 +146,53 @@ PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_a
 To https://github.com/AngelJava123/GitHub-Branching.git
  - [deleted]         add-title
 PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching>
+
+
+------------------------------------------------Open a Pull Request in GitHub------------------------------------------------
+
+
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git branch
+* main
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git branch add-form
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git checkout add-form
+Switched to branch 'add-form'
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git branch
+* add-form
+  main
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git push --set-upstream origin add-form
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'add-form' on GitHub by visiting:
+remote:      https://github.com/AngelJava123/GitHub-Branching/pull/new/add-form
+remote:
+To https://github.com/AngelJava123/GitHub-Branching.git
+ * [new branch]      add-form -> add-form
+branch 'add-form' set up to track 'origin/add-form'.
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git add .
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git commit -m "add-form"
+[add-form 383ca53] add-form
+ Committer: Tashev <angel.tashev@hp.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 7 insertions(+)
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 520 bytes | 260.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/AngelJava123/GitHub-Branching.git
+   c18f116..383ca53  add-form -> add-form
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching>
