@@ -208,4 +208,8 @@ Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/AngelJava123/GitHub-Branching.git
    c18f116..383ca53  add-form -> add-form
+<<<<<<< HEAD
 PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> updated
+=======
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching>
+>>>>>>> 39e5ff2d5e165579003ee8eaa0f3f84ce590904a
