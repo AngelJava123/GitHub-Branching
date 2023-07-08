@@ -1,0 +1,148 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\tasheva> git --version
+git version 2.41.0.windows.1
+
+------------------------------------------------Create and Clone Repo------------------------------------------------
+
+
+PS C:\Users\tasheva> cd C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests> git clone https://github.com/AngelJava123/GitHub-Branching.git
+Cloning into 'GitHub-Branching'...
+warning: You appear to have cloned an empty repository.
+
+------------------------------------------------ Add and Commit Files------------------------------------------------
+
+
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests> cd GitHub-Branching
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git add .
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git commit -m "Adding files"
+[main (root-commit) 580ae77] Adding files
+ Committer: Tashev <angel.tashev@hp.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 22 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 styles.css
+
+------------------------------------------------Push to GitHub------------------------------------------------
+
+
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git push
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 631 bytes | 210.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AngelJava123/GitHub-Branching.git
+ * [new branch]      main -> main
+
+------------------------------------------------Create a New Branch------------------------------------------------
+
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git branch add-title
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git branch
+  add-title
+* main
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git checkout add-title
+Switched to branch 'add-title'
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git branch
+* add-title
+  main
+
+------------------------------------------------Commit New Branch Changes------------------------------------------------
+
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git add .
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git commit -m "Added title"
+[add-title 112d27f] Added title
+ Committer: Tashev <angel.tashev@hp.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git push
+fatal: The current branch add-title has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin add-title
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+------------------------------------------------Add Upstream and Push Changes------------------------------------------------
+
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git push --set-upstream origin add-title
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 326 bytes | 163.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'add-title' on GitHub by visiting:
+remote:      https://github.com/AngelJava123/GitHub-Branching/pull/new/add-title
+remote:
+To https://github.com/AngelJava123/GitHub-Branching.git
+ * [new branch]      add-title -> add-title
+branch 'add-title' set up to track 'origin/add-title'.
+
+------------------------------------------------Merge Branches------------------------------------------------
+
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git merge add-title
+Updating 580ae77..112d27f
+Fast-forward
+ index.html | 1 +
+ 1 file changed, 1 insertion(+)
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AngelJava123/GitHub-Branching.git
+   580ae77..112d27f  main -> main
+
+------------------------------------------------Delete Branch------------------------------------------------
+
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git branch
+  add-title
+* main
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git branch -d add-title
+Deleted branch add-title (was 112d27f).
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git branch
+* main
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching> git push origin -d add-title
+To https://github.com/AngelJava123/GitHub-Branching.git
+ - [deleted]         add-title
+PS C:\Users\tasheva\Downloads\SU\Software_Engineering_and_DevOps\Git_Branching_and_Pull_Requests\GitHub-Branching>
